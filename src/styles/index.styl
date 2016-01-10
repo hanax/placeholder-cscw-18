@@ -1,0 +1,99 @@
+@import 'nib';
+@import './font-awesome.css';
+// @import './people.styl';
+// @import './projects.styl';
+// @import './publications.styl';
+// @import './contacts.styl';
+
+*
+  box-sizing border-box
+
+body
+  font-size 16px
+  font-family Lato, sans-serif
+  color rgb(60,60,60)
+  background-color #f6f6f6
+  width 100vw
+
+a
+  text-decoration none
+  outline 0
+  transition all .4s
+  &, &:active, &:focus
+    outline none
+
+h1
+  font-family Futura-CondensedMedium
+  font-weight 400
+  color #111
+  letter-spacing 1px
+  margin 0
+
+.content
+  width 85%
+  margin 0 auto
+  overflow hidden
+
+#header
+  height 100px
+  margin-bottom 4px
+  h1
+    text-transform uppercase
+    line-height 100px
+  &:before
+    background linear-gradient(to right, #AFEBB5, #5CB4C8)
+    content ''
+    display block
+    height 4px
+    width 100%
+
+.left
+  float left
+
+.right
+  float right
+
+ul
+  font-family Futura
+  font-size 15px
+  list-style-type none
+  margin 0
+
+li
+  display inline
+  margin-left 3px
+  line-height 100px
+  letter-spacing 1px
+  transition all .4s
+  padding 20px 15px
+  &:hover
+    background-color #eee
+  
+.slide-container
+  width 100%
+  height 380px
+  background-image url('/assets/project/project-1.png')
+  background-size cover
+  .overlay
+    position relative
+    background linear-gradient(to right, rgba(175,235,181,.9), rgba(92,180,200,.9))
+    content ''
+    display block
+    width 100%
+    height 100%
+    .slide-desc
+      width 60%
+      margin 0 auto
+      text-align center
+      padding-top 140px
+      h1
+        text-shadow 3px 3px 0 rgba(0,0,0,.1)
+    h1,span
+      color #fff
+      font-size 40px
+    span
+      line-height 380px
+      padding 0 20px
+      transition all .4s
+      &:hover
+        background rgba(0,0,0,.1)
