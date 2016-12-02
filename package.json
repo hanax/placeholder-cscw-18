@@ -1,5 +1,5 @@
 {
-  "name": "enhancing-ability-lab-website",
+  "name": "cscw-18-website",
   "author": "Hannah Xue",
   "version": "0.0.2",
   "devDependencies": {
@@ -27,5 +27,5 @@
   "dependencies": {
     "normalize-css": "^2.3.1"
   },
-  "repository": "hanax/enhancing_ability_lab_website"
+  "repository": "hanax/cscw-18"
 }

@@ -1,51 +1,76 @@
 @import 'nib';
 @import './font-awesome.css';
-// @import './people.styl';
-// @import './projects.styl';
-// @import './publications.styl';
-// @import './contacts.styl';
+
+title-grey = #272727
+content-grey = #484848
+light-green = #8CD2A6
+dark-green = #4EB5BA
+bg-light-grey = #F5F5F5
+text-light-grey = #D5D5D5
 
 *
   box-sizing border-box
 
 body
-  font-size 16px
-  font-family Lato, sans-serif
-  color rgb(60,60,60)
-  background-color #f6f6f6
+  font-size 14px
+  font-family 'Avenir', sans-serif
+  color content-grey
+  background-color #fff
   width 100vw
 
 a
   text-decoration none
   outline 0
-  transition all .4s
+  transition all .2s
+  color dark-green
+  &, &:active, &:focus
+    outline none
+  &:hover
+    text-decoration underline
+
+input
+  text-decoration none
+  outline 0
+  border none
   &, &:active, &:focus
     outline none
 
-h1
-  font-family Futura-CondensedMedium
-  font-weight 400
-  color #111
-  letter-spacing 1px
+h1,
+h2,
+h3
+  color title-grey
   margin 0
 
-.content
-  width 85%
-  margin 0 auto
-  overflow hidden
+h1
+  font-weight 300
+  font-size 50px
+  text-transform uppercase
 
-#header
-  height 100px
-  margin-bottom 4px
-  h1
-    text-transform uppercase
-    line-height 100px
-  &:before
-    background linear-gradient(to right, #AFEBB5, #5CB4C8)
-    content ''
-    display block
-    height 4px
-    width 100%
+h2
+  font-family 'Avenir Next Condensed'
+  font-weight 600
+  font-size 30px
+
+h3
+  font-family 'Avenir Next Condensed'
+  font-weight 400  
+  font-size 30px
+
+h4
+  font-family 'Avenir Next Condensed'
+  font-weight 500  
+  font-size 20px
+
+p
+  font-weight 200
+  font-size 16px
+
+ul
+  margin 0
+  padding 0
+  list-style-type none
+  li
+    margin-left 0
 
 .left
   float left
@@ -53,47 +78,150 @@ h1
 .right
   float right
 
-ul
-  font-family Futura
-  font-size 15px
-  list-style-type none
-  margin 0
+.left,
+.right
+  width 300px
 
-li
-  display inline
-  margin-left 3px
-  line-height 100px
-  letter-spacing 1px
-  transition all .4s
-  padding 20px 15px
-  &:hover
-    background-color #eee
-  
-.slide-container
-  width 100%
-  height 380px
-  background-image url('/assets/project/project-1.png')
-  background-size cover
-  .overlay
-    position relative
-    background linear-gradient(to right, rgba(175,235,181,.9), rgba(92,180,200,.9))
-    content ''
+@media screen and (min-width: 900px)
+  .l-title
+    width 30%
+    margin-top 0
+  .r-content
+    width 70%
+
+@media screen and (max-width: 900px)
+  .left,
+  .right
+    float none
     display block
     width 100%
-    height 100%
-    .slide-desc
-      width 60%
-      margin 0 auto
-      text-align center
-      padding-top 140px
-      h1
-        text-shadow 3px 3px 0 rgba(0,0,0,.1)
-    h1,span
-      color #fff
-      font-size 40px
+  .right
+    margin-top 30px
+
+.section
+  min-height 200px
+  width 100%
+  padding 70px 70px
+  overflow hidden
+  @media screen and (max-width: 900px)
+    padding 30px
+
+.btn
+  display inline-block
+  padding 0 20px
+  height 50px
+  border 1px solid dark-green
+  color dark-green
+  line-height 50px
+  text-align center
+  transition all .2s
+  font-size 18px
+  cursor pointer
+  .fa
+    margin-left 5px
+  &:hover
+    border 1px solid rgba(0,0,0,0)
+    background linear-gradient(to right, light-green, dark-green)
+    color #fff
+
+#header
+  @media screen and (min-width: 900px)
+    padding-top 90px
+    padding-bottom 0px
+    .left,
+    .right
+      line-height 70px
+    .right
+      text-align right
+
+#brief
+  background-color bg-light-grey
+  .btn
+    margin-top 20px
+  @media screen and (min-width: 900px)
+    .left
+      width 50%
+    .right
+      width 40%
+
+#faq
+  ul
+    margin-top 30px
+  .q
+    line-height 50px
+    display block
+    cursor pointer
     span
-      line-height 380px
-      padding 0 20px
-      transition all .4s
-      &:hover
-        background rgba(0,0,0,.1)
+      transition all .2s
+      font-size 20px
+      margin-right 10px
+    h4
+      display inline
+  .a
+    padding-left 15px
+    display none
+
+.rotate-chevron
+  transform rotate(90deg)
+
+#updates
+  background linear-gradient(to right, light-green, dark-green)
+  h2,
+  p
+    color #fff
+  h2
+    text-shadow 0 2px rgba(0,0,0,.3)
+
+#mailchimp
+  #mc_embed_signup_scroll
+    *
+      display inline-block
+    .mc-field-group
+      *
+        height 50px
+        line-height 50px
+        padding 0 15px
+        margin 0
+  #mce-EMAIL,
+  #mc-embedded-subscribe
+    height 50px
+  #mce-responses
+    margin-top 15px
+    color text-light-grey
+    font-size 12px
+  .email
+    background-color #fff
+    color #content-grey
+    font-size 18px
+  .button
+    padding 0 20px
+    background-color rgba(0,0,0,0)
+    border 1px solid #fff
+    color #fff
+    transition all .2s
+    font-size 18px
+    &:hover
+      background-color rgba(255,255,255,.3)
+  @media screen and (max-width: 900px)
+    #mc_embed_signup_scroll
+      *
+        display block
+      .mc-field-group
+        *
+          width 80vw
+    #mce-EMAIL,
+    #mc-embedded-subscribe
+      width 80vw
+
+#copyright
+  padding 0 0 15px 0
+  min-height 0
+  text-align center
+  color text-light-grey
+  a
+    &,
+    &:hover
+      color text-light-grey
+  p
+    font-size 12px
+    

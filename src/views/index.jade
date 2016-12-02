@@ -1,168 +1,91 @@
 doctype html
 html
-  head
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width,initial-scale=1')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width,initial-scale=1')
 
-    title Enhancing Ability Lab - Cornell Tech
+		title CSCW 2018
 
-    meta(name='description' content='Enhancing Ability Lab Website')
-    meta(name='keywords' content='enhancing ability accessibility hci cornell tech')
-    
-    //- meta(property="og:url" content="https://s.tech.cornell.edu")
-    //- meta(property="og:type" content="website")
-    //- meta(property="og:site_name" content="Social Technologies Lab - Cornell Tech")
-    //- meta(property="og:title" content="Social Technologies Lab - Cornell Tech")
-    //- meta(property="og:description" content="We design, build, and study systems that support social interactions in online and physical spaces.")
-    //- meta(property="og:image" content="https://s.tech.cornell.edu/assets/img/top.jpg")
-    //- meta(property="og:locale" content="en_US")
+		meta(name='description' content='CSCW - 2018')
+		meta(name='keywords' content='CSCW')
+		
+		meta(property="og:url" content="https://cscw.acm.org/2018/")
+		meta(property="og:type" content="website")
+		meta(property="og:site_name" content="CSCW - 2018")
+		meta(property="og:title" content="CSCW - 2018")
+		meta(property="og:description" content="Future home of CSCW 2018.")
+		meta(property="og:image" content="")
+		meta(property="og:locale" content="en_US")
 
-    //- meta(name="twitter:card" content="summary_large_image")
-    //- meta(name="twitter:site" content="@STechCornell")
-    //- meta(name="twitter:creator" content="@STechCornell")
-    //- meta(name="twitter:title" content="Social Technologies Lab - Cornell Tech")
-    //- meta(name="twitter:description" content="We design, build, and study systems that support ocial interactions in online and physical spaces.")
-    //- meta(name="twitter:image" content="https://s.tech.cornell.edu/assets/img/top.jpg")
+		//- link(rel='apple-touch-icon shortcut icon image_src' href='./assets/favicon.ico')
 
-    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Lato:300,300i,400,400i,700')
-    link(rel='stylesheet' href='//fonts.googleapis.com/css?family=Roboto+Condensed:300')
+		script(src='//code.jquery.com/jquery-2.1.4.min.js')
+		script(src='./main.js')
 
-    //- link(rel='apple-touch-icon shortcut icon image_src' href='./assets/favicon.ico')
+	body
 
-    script(src='//code.jquery.com/jquery-2.1.4.min.js')
-    script(src='./main.js')
-    //- script(src='https://maps.googleapis.com/maps/api/js')
+	.section#header
+		.left
+			h1 CSCW 2018
+		.right
+			h3 Oct/Nov 2018, Location TBD
 
-  body
+	.section#brief
+		.left
+			p!= briefs.brief
+			a(href='#updates')
+				.btn
+					span Sign up for mailing list
+					span.fa.fa-angle-double-down
+		.right
+			h2 News in Brief
+			each n in briefs.news
+				p= n
 
-    .section#header
-      .content
-        .left
-          h1 Enhancing Ability Lab
-        .right
-          ul#navi
-            li People
-            li Projects
-            li Publications
-            li Contact
+	.section#faq
+		h2 FAQs
+		ul
+			each f in faqs
+				li
+					.q
+						span.fa.fa-caret-right
+						h4= f.q
+					.a
+						p!= f.a
 
-    .section#slides
-      .content
-        .slide-container
-          .overlay
-            .left 
-              span.fa.fa-angle-left
-            .right 
-              span.fa.fa-angle-right
-            .slide-desc
-              h1 Understanding Real World Challenges of People with Low Vision
+	.section#updates
+		.left.l-title
+			h2 Get Updates
+		.left.r-content
+			p Want more information? Please sign up for our mailing list!
+			#mailchimp
+				// Begin MailChimp Signup Form
+				#mc_embed_signup
+					form#mc-embedded-subscribe-form.validate(action='//cornell.us3.list-manage.com/subscribe/post?u=9ff7319a6ef1ae54ed30d9609&id=d724c21974', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+						#mc_embed_signup_scroll
+							.mc-field-group
+								input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+							// real people should not fill this in and expect good things - do not remove this or risk form bot signups
+							div(style='position: absolute; left: -5000px;', aria-hidden='true')
+								input(type='text', name='b_9ff7319a6ef1ae54ed30d9609_d724c21974', tabindex='-1', value='')
+							.clear
+								input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
+							#mce-responses.clear
+								#mce-error-response.response(style='display:none')
+								#mce-success-response.response(style='display:none')
+				script(type='text/javascript', src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')
+				script(type='text/javascript').
+					(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+				// End mc_embed_signup
 
-    //- .slide#about
-    //-   .card
-    //-     .subsection#subsection-about-us
-    //-       h2.subsection-title About Us
-    //-       .subsection-content
-    //-         figure
-    //-           img(src="./assets/img/top.jpg", alt="")
-    //-           figcaption We design, build, and study systems that support social interactions in online and physical spaces.
+	.section#organizers
+		.left.l-title
+			h2 Organizers
+		.left.r-content
+			each o in organizers
+				p!= o.title
 
-    //-         p We utilize a variety of methods from mining data on social media to conducting controlled experiments to interviewing users. Our work aims to understand the significance of people’s digital traces and to leverage this information for positive social good.
-
-    //-         p
-    //-           | We are the 
-    //-           a(href='http://tech.cornell.edu/jacobs-technion-cornell-institute/overview', target='_blank') Jacobs Institute
-    //-           | ’s Connective Media hub at 
-    //-           a(href='http://tech.cornell.edu/', target='_blank') Cornell Tech
-    //-           | . Part of our research is conducted within the 
-    //-           a(href='https://cx.jacobs.cornell.edu/', target='_blank') Connected Experiences Lab
-    //-           | . If you are interested in working with us, please get in touch by contacting us below!
-
-    //-       .subsection#subsection-news
-    //-         h2.subsection-title News
-    //-         .subsection-content
-    //-           ul#news-list: each n in news
-    //-             li.news
-    //-               .project-info
-    //-                 p
-    //-                   span.fa.fa-newspaper-o
-    //-                   span= n.date
-    //-                   span.news-title!= n.title
-
-    //-     .subsection#subsection-people
-    //-       h2.subsection-title People
-    //-       .subsection-content
-    //-         ul#people-list: each p in people
-    //-           li.person
-    //-             img(src='#{p.image}')
-    //-             .person-info
-    //-               a(href=p.link, target='_blank')
-    //-                 h3.person-name= p.name
-    //-               p.person-title= p.title
-    //-             .person-contact
-    //-               a.person-email(href='mailto:#{p.email}')= p.email
-    //-               if p.twitter
-    //-                 a.person-twitter(href='https://twitter.com/#{p.twitter}') @#{p.twitter}
-        
-    //-     #project-news-box    
-    //-       .subsection#subsection-projects
-    //-         h2.subsection-title Projects
-    //-         .subsection-content
-    //-           ul#project-list: each p in projects
-    //-             li.project
-    //-               .project-img-box(style='background-image: url(#{p.image})')
-    //-               .project-info
-    //-                 h3.project-title= p.title
-    //-                 p.project-description!= p.desc
-    //-                 //- a.project-link(href=p.link)
-    //-                 //-   span.fa.fa-file
-    //-                 //-   span PDF
-
-    //- .slide#publications
-    //-   .card
-    //-     h2.subsection-title Publications
-    //-     ul: each p in publications
-    //-       li
-    //-         .image(style='background-image: url(#{p.image})')
-    //-         p= p.title
-    //-         a(href=p.link, target='_blank')
-    //-           span.fa.fa-file
-    //-           span PDF
-
-    //- .slide#contact
-    //-   .card
-    //-     h2.subsection-title Contact
-
-    //-     .contact-block#contact-block-left
-
-    //-       #contact-mailing-list
-    //-         #mc_embed_signup
-    //-           form(action="//nyc.us12.list-manage.com/subscribe/post?u=29fc6ecc44ebe11b0169accfe&amp;id=f1cff316c0" method="post" iid="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
-    //-             #mc_embed_signup_scroll
-    //-             label(for="mce-EMAIL")
-    //-               span.fa.fa-envelope-o
-    //-               span Join Our Mailing List
-    //-             input(type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required)
-    //-             div(style="position: absolute; left: -5000px;" aria-hidden="true")
-    //-               input(type="text" name="b_29fc6ecc44ebe11b0169accfe_f1cff316c0" tabindex="-1" value="")
-    //-             .clear
-    //-               input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
-
-    //-       #contact-twitter
-    //-         a(href="https://www.twitter.com/STechCornell")
-    //-             span.fa.fa-twitter
-    //-             span Follow Us On Twitter
-
-    //-       //- form
-    //-       //-   input(type="text")
-    //-       //-   input(type="submit")
-
-    //-     .contact-block#contact-block-middle
-    //-       #contact-location
-    //-         #map
-
-    //-     .contact-block#contact-block-right
-    //-       p We're located at Cornell Tech. Come by and say hi!
-    //-       address 111 8th Ave<br>Suite #1202<br>New York, NY
-
-          
-
+	.section#copyright
+		p
+			a(href='mailto: web2018@cscw.acm.org') web2018@cscw.acm.org
+		p CSCW 2018 | Copyright © 2016

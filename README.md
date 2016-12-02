@@ -1,4 +1,4 @@
-## Website of Social Technologies Lab @ Cornell Tech
+## Website for CSCW'18
 
 ```
 $ npm install

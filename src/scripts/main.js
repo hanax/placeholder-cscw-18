@@ -5,25 +5,13 @@ $(() => {
   const windowHeight = $(window).height();
   const windowWidth = $(window).width();
 
-  $(window).scroll(() => {
-    if ($("body").scrollTop() > windowHeight / 2) {
-      $(".header-stick .title").fadeIn("slow");
-    } else {
-      $(".menu-dropdown").fadeOut("fast");
-      $(".header-stick .title").fadeOut("slow");
-    }
-  });
-
-  $(".menu").click(() => {
-    $(".menu-dropdown").fadeToggle("fast");
-  });
-
-  $("body").click((e) => {
-    const t = $(e.target);
-    if (!t.closest(".menu").length && !t.closest(".menu-dropdown").length) {
-      $(".menu-dropdown").fadeOut("fast");
-    }
-  });
+  $('#faq')
+    .on('click', '.q', function(e) {
+      const $ans = $(this).closest('li').find('.a');
+      const $chevron = $(this).find('.fa');
+      $ans.toggle('display');
+      $chevron.toggleClass('rotate-chevron');
+    });
 
   // Smooth Scrolling
   $('a[href*=#]:not([href=#])').click(function(){
