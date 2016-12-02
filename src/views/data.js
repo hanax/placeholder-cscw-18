@@ -19,8 +19,8 @@ marked.setOptions({
 var briefs = {
   brief: marked('The full conference website is coming soon. In the meantime, we have put together this page to provide quick news and updates about CSCW 2018. Please use the form at the bottom of this page to sign up for CSCW 2018 updates -- or, follow CSCW on [Twitter](http://www.twitter.com/ACM_CSCW) and [Facebook](http://www.facebook.com/acmCSCW).'),
   news: [
-    'CSCW is moving to the fall schedule. The CSCW 2018 conference will take place in late October or early November of 2018, most likely in the New York area.',
-    'To bridge the year-and-a-half gap between CSCW 2017 and CSCW 2018, we will have two submission deadlines -- one in May 2017 and one in May 2018.'
+    'CSCW is moving to a fall schedule. The CSCW 2018 conference will take place around early November 2018, most likely in the New York area.',
+    'To bridge the year-and-a-half gap between CSCW 2017 and CSCW 2018, we will have two submission deadlines -- the first is coming soon in April/May 2017.'
   ]
 };
 
@@ -34,6 +34,12 @@ var faqs = [
       + '</ol> <p>'
       + 'It was the combination of the timing of submissions and representation, as well as the overlap with CHI, that drove the steering committee to present the change to a Fall timeline, and to receive enough positive feedback to make the change.'
       + '</p>'
+  },
+  {
+    q: 'What will happen with papers submitted in 2017?',
+    a: '<p>The papers will go through a normal CSCW review cycle, with accepted papers be published online in fall of 2017.'
+      + '</p> <p>'
+      + 'Most interesting is that automatic indexing services like ISI will read our work as a journal, not as a conference proceedings. This should not only heighten the visibility of work of authors in this community, but also allow for better comparability with fields outside of Computer Science. </p>'
   },
   {
     q: 'What is PACM, and what does it mean for CSCW?',
