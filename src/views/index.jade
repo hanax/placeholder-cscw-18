@@ -33,15 +33,15 @@ html
 
 	.section#brief
 		.left
+			h2 News in Brief
+			each n in briefs.news
+				p= n
+		.right
 			p!= briefs.brief
 			a(href='#updates')
 				.btn
 					span Sign up for mailing list
 					span.fa.fa-angle-double-down
-		.right
-			h2 News in Brief
-			each n in briefs.news
-				p= n
 
 	.section#faq
 		h2 FAQs
