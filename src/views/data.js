@@ -37,15 +37,16 @@ var faqs = [
   },
   {
     q: 'What will happen with papers submitted in 2017?',
-    a: '<p>The papers will go through a normal CSCW review cycle, with accepted papers be published online in fall of 2017.'
+    a: '<p>The papers will go through a normal CSCW review cycle, with accepted papers to be published online in fall of 2017.'
       + '</p> <p>'
-      + 'Most interesting is that automatic indexing services like ISI will read our work as a journal, not as a conference proceedings. This should not only heighten the visibility of work of authors in this community, but also allow for better comparability with fields outside of Computer Science. </p>'
   },
   {
     q: 'What is PACM, and what does it mean for CSCW?',
     a: '<p>PACM (Proceedings of the ACM) is shorthand for a journal series -- attached mainly to ACM special interest groups -- that will change our publication format to something more closely resembling a journal article. In general, the paper submission process and assessment ofr CSCW will remain much the same. The main difference lies in how the work will be referenced.'
       + '</p> <p>'
       + 'Most interesting is that automatic indexing services like ISI will read our work as a journal, not as a conference proceedings. This should not only heighten the visibility of work of authors in this community, but also allow for better comparability with fields outside of Computer Science. </p>'
+      + '</p> <p>'
+      + 'It is the intention to move all future CSCW conferences to the PACM publishing model. </p>'
   },
 ].map(function(n) {
   n.a = marked(n.a);
