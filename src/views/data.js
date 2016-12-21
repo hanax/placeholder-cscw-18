@@ -58,7 +58,7 @@ var organizers = [
     title: 'General co-chairs: Vanessa Evers, Mor Naaman : [chairs2018@cscw.acm.org](mailto:chairs2018@cscw.acm.org)'
   },
   {
-    title: 'PC co-chairs: Laura Dabbish, Karrie Karahalios : [papers2018@cscw.acm.org](mailto:papers2018@cscw.acm.org)'
+    title: 'PC co-chairs: Laura Dabbish, Geraldine Fitzpatrick, Karrie Karahalios : [papers2018@cscw.acm.org](mailto:papers2018@cscw.acm.org)'
   }
 ].map(function(n) {
   n.title = marked(n.title);
