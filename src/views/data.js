@@ -20,7 +20,8 @@ var briefs = {
   brief: marked('The full conference website is coming soon. In the meantime, we have put together this page to provide quick news and updates about CSCW 2018. Please use the form at the bottom of this page to sign up for CSCW 2018 updates -- or, follow CSCW on [Twitter](http://www.twitter.com/ACM_CSCW) and [Facebook](http://www.facebook.com/acmCSCW).'),
   news: [
     'CSCW is moving to a fall schedule. The CSCW 2018 conference will take place around early November 2018, most likely in the New York area.',
-    'To bridge the year-and-a-half gap between CSCW 2017 and CSCW 2018, we will have two submission deadlines -- the first is coming soon in April/May 2017.'
+    'To bridge the year-and-a-half gap between CSCW 2017 and CSCW 2018, we will have two submission deadlines in spring 2017 and spring 2018.',
+    'The spring 2017 Online First deadline is Thursday April 27, with abstracts due April 20. First-round reviews will be sent on June 12th; and revisions will be due July 10th.'
   ]
 };
 
@@ -37,7 +38,7 @@ var faqs = [
   },
   {
     q: 'What will happen with papers submitted in 2017?',
-    a: '<p>The papers will go through a normal CSCW review cycle, with accepted papers to be published online in fall of 2017.'
+    a: '<p>The papers will go through a normal CSCW review cycle, with accepted papers to be published Online First in fall of 2017.'
       + '</p> <p>'
   },
   {
