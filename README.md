@@ -1,4 +1,4 @@
-## Website for CSCW'18
+## Placeholder Website for CSCW'18
 
 ```
 $ npm install
